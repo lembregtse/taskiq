@@ -212,7 +212,7 @@ class Receiver:
             logger.info("MWS: %s", self.broker.middlewares)
             for middleware in self.broker.middlewares:
                 logger.info("MW: %s", middleware)
-                logger.info("CMP": %s", middleware.__class__.on_error != TaskiqMiddleware.on_error)
+                logger.info("CMP: %s", middleware.__class__.on_error != TaskiqMiddleware.on_error)
                 if middleware.__class__.on_error != TaskiqMiddleware.on_error:
                     logger.info("Inside")
                     await maybe_awaitable(
