@@ -215,12 +215,11 @@ class Receiver:
                 logger.info("CMP: %s", middleware.__class__.on_error != TaskiqMiddleware.on_error)
                 if middleware.__class__.on_error != TaskiqMiddleware.on_error:
                     logger.info("Inside")
-                    await maybe_awaitable(
-                        middleware.on_error(
+                    await middleware.on_error(
                             message,
                             result,
                             found_exception,
                         )
-                    )
+                    
 
         return result
