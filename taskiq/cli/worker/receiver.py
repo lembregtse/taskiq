@@ -215,7 +215,7 @@ class Receiver:
                             message,
                             result,
                             found_exception,
-                        ),
+                        )
                     )
 
         return result
